@@ -1,0 +1,40 @@
+@mixin img($img) {
+	background-size: cover;
+	background-position: center;
+	background-image: url($img);
+}
+
+@mixin flex-center($direction) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+}
+
+@mixin background-color($bgc, $color) {
+	background-color: $bgc;
+	color: $color;
+}
+
+@mixin space($lineheight, $letterspacing) {
+	line-height: $lineheight;
+	letter-spacing: $letterspacing;
+}
+
+@mixin button($color, $bordersize, $bordercolor) {
+	color: $color;
+	border: $bordersize solid $bordercolor;
+}
+
+// Font weight
+.fw {
+	&-300 {
+		font-weight: 300;
+	}
+	&-400 {
+		font-weight: 400;
+	}
+	&-700 {
+		font-weight: 700;
+	}
+}

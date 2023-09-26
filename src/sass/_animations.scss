@@ -1,0 +1,16 @@
+@keyframes bounce {
+	0% {
+		top: -20px;
+		opacity: 0.4;
+	}
+	30% {
+		opacity: 0.8;
+	}
+	60% {
+		top: 90px;
+	}
+	100% {
+		top: -20px;
+		opacity: 0.4;
+	}
+}
