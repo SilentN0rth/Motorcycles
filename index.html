@@ -23,13 +23,13 @@
             <h2 class="header__subtitle fw-400">As the owner of a motorcycle, it is your legal duty to ensure it is
                 roadworthy and
                 does not pose a hazard to yourself, any passengers, other road users or the general public.</h2>
-            <button aria-label="Scroll down" class="btn btn--header"><img src="/src/img/icons/arrowdown.svg"
-                    alt=""></button>
+            <a href="#aboutus" aria-label="Scroll down" class="btn btn--header"><img src="/src/img/icons/arrowdown.svg"
+                    alt=""></a>
         </div>
     </header>
     <main class="main">
         <div class="wrapper">
-            <div class="main__box">
+            <div class="main__box" id="aboutus">
                 <div class="main__card main__card--one"></div>
                 <div class="main__card main__card--two">
                     <div class="underline"></div>
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="rental">
+        <div class="rental" id="rental">
             <div class="wrapper">
                 <div class="rental__box">
                     <div class="rental__card rental__card--one">
@@ -78,7 +78,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="service">
+            <div class="service" id="services">
                 <h2 class="main__title fw-300">Full <span class="fw-700">Motorcycle</span> Service</h2>
                 <div class="service__img"></div>
                 <div class="service__text fw-300">
@@ -100,7 +100,7 @@
             <div class="images__img images__img--three"></div>
         </div>
         <div class="wrapper">
-            <div class="gallery">
+            <div class="gallery" id="gallery">
                 <h2 class="main__title fw-300">Our <span class="fw-700">gallery</span></h2>
                 <div class="gallery__box">
                     <div class="gallery__img gallery__img--one"></div>
@@ -110,7 +110,7 @@
                     <div class="gallery__img gallery__img--five"></div>
                     <div class="gallery__img gallery__img--six"></div>
                 </div>
-                <button aria-label="See more photos" class="btn btn--gallery">See more</button>
+                <a href="#" aria-label="See more photos" class="btn btn--gallery">See more</a>
             </div>
         </div>
         <div class="storage">
@@ -131,13 +131,13 @@
                                 dangerously, to the tow bars of regular tow trucks, and extensive market research, we
                                 started our company...
                             </p>
-                            <button aria-label="Read more" class="btn btn--storage">Read more</button>
+                            <a href="#" aria-label="Read more" class="btn btn--storage">Read more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="wrapper">
                 <h2 class="main__title fw-700">Contact <span class="fw-300">us</span></h2>
                 <p class="main__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, eveniet.</p>
@@ -162,7 +162,8 @@
         </div>
     </main>
     <footer class="footer">
-        <p class="footer__text">Motorcycle services • &copy; <span class="footer__year">2023</span></p>
+        <p class="footer__text">Motorcycle services • &copy;<span class="footer__year"></span></p>
+        <p class="footer__text"></p>
     </footer>
 
     <script src="/dist/js/script.min.js"></script>
