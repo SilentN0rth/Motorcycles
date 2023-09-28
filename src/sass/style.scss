@@ -688,6 +688,9 @@ body {
 			top: 0;
 			bottom: auto;
 			.nav {
+				&__logo {
+					display: flex;
+				}
 				&__items {
 					width: auto;
 					display: flex;
