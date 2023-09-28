@@ -690,6 +690,11 @@ body {
 			.nav {
 				&__logo {
 					display: flex;
+					&-text {
+						color: $white;
+						text-decoration: none;
+						font-size: 1.4rem;
+					}
 				}
 				&__items {
 					width: auto;
