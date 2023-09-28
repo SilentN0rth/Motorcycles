@@ -40,7 +40,7 @@ body {
 		border-radius: 250px;
 		background-color: rgba(0, 0, 0, 0.25);
 		transition: scale 0.3s, border 0.3s;
-		img {
+		i {
 			width: 20px;
 			position: absolute;
 			top: 50%;
@@ -73,7 +73,98 @@ body {
 	width: 100px;
 	background-color: $black;
 }
+
+.overflow-hidden {
+	// NAV (body)
+	overflow: hidden;
+}
+
 // End of MAIN CLASSES
+
+// NAV
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: $darkgray;
+	z-index: 20;
+
+	&__items {
+		display: none;
+	}
+	&__logo {
+		display: none;
+	}
+
+	&__hamburger {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		&-btn {
+			color: $white;
+			font-size: 1.7rem;
+			padding: 0.7em;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+		}
+	}
+	&--active {
+		flex-direction: column;
+		bottom: 0;
+		background-color: $black;
+		.nav {
+			&__hamburger {
+				order: 1;
+				&-btn {
+					font-size: 2rem;
+				}
+			}
+			&__hamburger-btn,
+			&__items,
+			&__item {
+				width: 100%;
+				height: 100%;
+				transition: background-color 0.3s;
+			}
+
+			&__items,
+			&__item {
+				font-size: 1.7rem;
+			}
+
+			&__items {
+				width: 100%;
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				order: 5;
+			}
+			&__item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $white;
+				text-decoration: none;
+				border-top: 2px solid $darkgray;
+				text-transform: uppercase;
+			}
+
+			&__hamburger-btn,
+			&__item {
+				&:hover {
+					background-color: $lightgray;
+				}
+			}
+		}
+	}
+}
+// End of NAV
 
 // HEADER
 .header {
@@ -371,6 +462,21 @@ body {
 	@include background-color($black, $white);
 }
 @media (min-width: 576px) {
+	.nav {
+		&--active {
+			bottom: 0;
+			right: 50%;
+			.nav {
+				&__item {
+					font-size: 1.2rem;
+					border-right: 2px solid $darkgray;
+				}
+				&__hamburger {
+					display: flex;
+				}
+			}
+		}
+	}
 	.main {
 		&__title {
 			font-size: 1.6rem;
@@ -379,6 +485,28 @@ body {
 }
 
 @media (min-width: 768px) {
+	.nav {
+		&--active {
+			right: auto;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			.nav {
+				&__item {
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					padding: 0 1em;
+				}
+				&__hamburger {
+					grid-column: 2/2;
+					grid-row: 1/2;
+					height: 100%;
+					background-color: $black;
+					z-index: 50;
+				}
+			}
+		}
+	}
 	.header {
 		&__subtitle {
 			margin: 0 auto;

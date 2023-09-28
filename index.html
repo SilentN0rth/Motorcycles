@@ -12,11 +12,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/9b1d21b601.js" crossorigin="anonymous"></script>
     <!-- CSS styles -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body>
+    <nav class="nav nav--active"> <!-- nav--active -->
+        <div class="nav__logo">
+            <a href="./index.html" class="nav__logo-text"><i class="fa-solid fa-motorcycle"></i> Motorcycle
+                services</a>
+        </div>
+        <div class="nav__items">
+            <a href="#aboutus" class="nav__item">About us</a>
+            <a href="#rental" class="nav__item nav__item--active">Rental</a>
+            <a href="#services" class="nav__item nav__item--active">Services</a>
+            <a href="#gallery" class="nav__item">Gallery</a>
+            <a href="#contact" class="nav__item">Contact</a>
+        </div>
+        <div class="nav__hamburger">
+            <button class="nav__hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
     <header class="header">
         <div class="header__shadow"></div>
         <div class="wrapper">
@@ -24,8 +42,8 @@
             <h2 class="header__subtitle fw-400">As the owner of a motorcycle, it is your legal duty to ensure it is
                 roadworthy and
                 does not pose a hazard to yourself, any passengers, other road users or the general public.</h2>
-            <a href="#aboutus" aria-label="Scroll down" class="btn btn--header"><img src="./src/img/icons/arrowdown.svg"
-                    alt=""></a>
+            <a href="#aboutus" aria-label="Scroll down" class="btn btn--header"><i
+                    class="fa-solid fa-arrow-down"></i></a>
         </div>
     </header>
     <main class="main">
