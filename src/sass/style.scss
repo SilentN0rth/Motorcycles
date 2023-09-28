@@ -90,7 +90,7 @@ body {
 	top: 0;
 	right: 0;
 	left: 0;
-	background-color: $darkgray;
+	background-color: $black;
 	z-index: 20;
 
 	&__items {
@@ -101,6 +101,7 @@ body {
 	}
 
 	&__hamburger {
+		margin: 0;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -117,7 +118,6 @@ body {
 	&--active {
 		flex-direction: column;
 		bottom: 0;
-		background-color: $black;
 		.nav {
 			&__hamburger {
 				order: 1;
@@ -677,6 +677,39 @@ body {
 }
 
 @media (min-width: 992px) {
+	.nav {
+		&--active {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			padding: 0 1em;
+			right: 0;
+			top: 0;
+			bottom: auto;
+			.nav {
+				&__items {
+					width: auto;
+					display: flex;
+					flex-direction: row;
+				}
+				&__item {
+					padding: 2em 1em;
+					width: auto;
+					border: none;
+				}
+				&__hamburger {
+					// width: auto;
+					// &-btn {
+					// 	&:hover {
+					// 		background-color: transparent;
+					// 	}
+					// }
+					display: none;
+				}
+			}
+		}
+	}
 	.main {
 		&__box {
 			height: 600px;
