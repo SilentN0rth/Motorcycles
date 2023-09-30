@@ -12,27 +12,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/9b1d21b601.js" crossorigin="anonymous"></script>
+
     <!-- CSS styles -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body>
-    <nav class="nav nav--active"> <!-- nav--active -->
+    <nav class="nav">
         <div class="nav__logo">
             <a href="./index.html" class="nav__logo-text"><i class="fa-solid fa-motorcycle"></i> Motorcycle
                 services</a>
         </div>
         <div class="nav__items">
             <a href="#aboutus" class="nav__item">About us</a>
-            <a href="#rental" class="nav__item nav__item--active">Rental</a>
-            <a href="#services" class="nav__item nav__item--active">Services</a>
+            <a href="#rental" class="nav__item ">Rental</a>
+            <a href="#services" class="nav__item ">Services</a>
             <a href="#gallery" class="nav__item">Gallery</a>
             <a href="#contact" class="nav__item">Contact</a>
         </div>
         <div class="nav__hamburger">
-            <button class="nav__hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+            <button class="nav__hamburger-btn" aria-label="Navigation button"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
     <header class="header">
@@ -42,13 +41,15 @@
             <h2 class="header__subtitle fw-400">As the owner of a motorcycle, it is your legal duty to ensure it is
                 roadworthy and
                 does not pose a hazard to yourself, any passengers, other road users or the general public.</h2>
-            <a href="#aboutus" aria-label="Scroll down" class="btn btn--header"><i
-                    class="fa-solid fa-arrow-down"></i></a>
+            <a href="#aboutus" aria-label="Scroll down" class="btn btn--header">
+                <!-- <i class="fa-solid fa-arrow-down"></i> -->
+                <div class="scroll"></div>
+            </a>
         </div>
     </header>
     <main class="main">
         <div class="wrapper">
-            <div class="main__box" id="aboutus">
+            <div class="section main__box" id="aboutus">
                 <div class="main__card main__card--one"></div>
                 <div class="main__card main__card--two">
                     <div class="underline"></div>
@@ -69,7 +70,7 @@
             </div>
         </div>
 
-        <div class="rental" id="rental">
+        <div class="section rental" id="rental">
             <div class="wrapper">
                 <div class="rental__box">
                     <div class="rental__card rental__card--one">
@@ -82,22 +83,22 @@
                             to 60% on deals from over 1,053 car rental companies.</p>
                     </div>
                     <div class="rental__card rental__card--two">
-                        <img class="rental__card-icon" src="./src/img/icons/location.svg" alt="">
+                        <img class="rental__card-icon" src="./src/img/icons/location.svg" width="50" height="50" alt="">
                         <p class="main__text">Location</p>
                     </div>
                     <div class="rental__card rental__card--three">
-                        <img class="rental__card-icon" src="./src/img/icons/car.svg" alt="">
+                        <img class="rental__card-icon" src="./src/img/icons/car.svg" width="50" height="50" alt="">
                         <p class="main__text">250+ cars</p>
                     </div>
                     <div class="rental__card rental__card--four">
-                        <img class="rental__card-icon" src="./src/img/icons/users.svg" alt="">
+                        <img class="rental__card-icon" src="./src/img/icons/users.svg" width="50" height="50" alt="">
                         <p class="main__text">Happy Users</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="wrapper">
-            <div class="service" id="services">
+            <div class="section service" id="services">
                 <h2 class="main__title fw-300">Full <span class="fw-700">Motorcycle</span> Service</h2>
                 <div class="service__img"></div>
                 <div class="service__text fw-300">
@@ -119,7 +120,7 @@
             <div class="images__img images__img--three"></div>
         </div>
         <div class="wrapper">
-            <div class="gallery" id="gallery">
+            <div class="section gallery" id="gallery">
                 <h2 class="main__title fw-300">Our <span class="fw-700">gallery</span></h2>
                 <div class="gallery__box">
                     <div class="gallery__img gallery__img--one"></div>
@@ -156,23 +157,23 @@
                 </div>
             </div>
         </div>
-        <div class="contact" id="contact">
+        <div class="section contact" id="contact">
             <div class="wrapper">
                 <h2 class="main__title fw-700">Contact <span class="fw-300">us</span></h2>
                 <p class="main__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, eveniet.</p>
                 <div class="contact__box">
                     <div class="contact__card">
-                        <img src="./src/img/icons/location.svg" alt="" class="contact__card-img">
+                        <img class="contact__card-img" src="./src/img/icons/location.svg" width="50" height="50" alt="">
                         <p class="contact__card-title">Address</p>
                         <p class="contact__card-desc">27 13 Lowe Haven</p>
                     </div>
                     <div class="contact__card">
-                        <img src="./src/img/icons/phone.svg" alt="" class="contact__card-img">
+                        <img class="contact__card-img" src="./src/img/icons/phone.svg" width="50" height="50" alt="">
                         <p class="contact__card-title">Phone</p>
                         <p class="contact__card-desc">111 343 43 43</p>
                     </div>
                     <div class="contact__card">
-                        <img src="./src/img/icons/page.svg" alt="" class="contact__card-img">
+                        <img class="contact__card-img" src="./src/img/icons/page.svg" width="50" height="50" alt="">
                         <p class="contact__card-title">Email</p>
                         <p class="contact__card-desc">business@info.com</p>
                     </div>

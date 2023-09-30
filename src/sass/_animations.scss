@@ -1,16 +1,38 @@
+@use './colors' as *;
+
 @keyframes bounce {
 	0% {
-		top: -20px;
-		opacity: 0.4;
+		top: 25%;
 	}
-	30% {
-		opacity: 0.8;
-	}
-	60% {
-		top: 90px;
+	50% {
+		top: 75%;
+		background-color: $white;
 	}
 	100% {
-		top: -20px;
-		opacity: 0.4;
+		top: 25%;
 	}
+}
+
+@mixin translate($name, $from, $to, $duration) {
+	@keyframes #{$name} {
+		from {
+			translate: $from;
+		}
+		to {
+			translate: $to;
+		}
+	}
+	animation: $name $duration;
+}
+
+@mixin opacity($name, $from, $to, $duration) {
+	@keyframes #{$name} {
+		from {
+			opacity: $from;
+		}
+		to {
+			opacity: $to;
+		}
+	}
+	animation: $name $duration;
 }
