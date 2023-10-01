@@ -1,7 +1,6 @@
 const nav = document.querySelector('.nav')
 const allSections = document.querySelectorAll('.section')
 const navItems = document.querySelectorAll('.nav__item')
-const navItem = document.querySelector('.nav__item')
 const navBtn = document.querySelector('.nav__hamburger-btn')
 
 // Nav
@@ -9,6 +8,7 @@ const toggleNav = () => {
 	nav.classList.toggle('nav--active')
 	document.body.classList.toggle('overflow-hidden')
 	nav.classList.toggle('nav--animation')
+	navBtn.classList.toggle('burger--active')
 }
 const toggleLinks = e => {
 	nav.classList.remove('nav--active')

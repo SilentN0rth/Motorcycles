@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './mixins' as *;
 @use './animations' as *;
+@use './components' as *;
 
 * {
 	box-sizing: border-box;
@@ -117,43 +118,17 @@ body {
 		}
 	}
 
-	&__hamburger {
-		margin: 0;
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-
-		&-btn {
-			padding: 1em;
-			color: $white;
-			font-size: 1.7rem;
-			background-color: transparent;
-			border: none;
-			cursor: pointer;
-		}
-	}
-
 	&--active {
 		flex-direction: column;
 		bottom: 0;
 		.nav {
-			&__hamburger-btn,
 			&__item {
 				transition: background-color 0.3s;
 				&:hover {
 					background-color: $lightgray;
 				}
 			}
-			&__hamburger {
-				order: 1;
-				width: 100%;
 
-				&-btn {
-					padding: 2em 0;
-					font-size: 2rem;
-				}
-			}
-			&__hamburger-btn,
 			&__items,
 			&__item {
 				width: 100%;
@@ -424,6 +399,8 @@ body {
 	}
 
 	.storage {
+		padding: 2em 0;
+		@include background-color($black, $white);
 		.main {
 			&__title {
 				text-align: left;
@@ -435,8 +412,6 @@ body {
 		.btn--storage {
 			margin-top: 2em;
 		}
-		padding: 2em 0;
-		@include background-color($black, $white);
 		&__box {
 			&-img {
 				display: grid;
@@ -461,6 +436,8 @@ body {
 	}
 
 	.contact {
+		padding: 2em 0;
+		@include background-color($darkgray, $white);
 		.main {
 			&__title {
 				margin-top: 0.5em;
@@ -470,8 +447,6 @@ body {
 				margin: 1em 0 0.5em;
 			}
 		}
-		padding: 2em 0;
-		@include background-color($darkgray, $white);
 
 		&__box {
 			@include flex-center(row);
@@ -699,23 +674,20 @@ body {
 @media (min-width: 992px) {
 	.nav {
 		justify-content: space-around;
-		height: 86.38px;
-		&__active,
-		&__hamburger {
+		height: 67px;
+		&__active {
 			display: none;
 		}
+
 		&__logo,
 		&__items {
 			height: 100%;
 			display: flex;
 		}
 
-		&__logo,
 		&__item {
 			display: flex;
 			align-items: center;
-		}
-		&__item {
 			transition: background-color 0.3s;
 			@include translate(navItems, 100vw, 0, 1s);
 			padding: 0 1em;
@@ -725,11 +697,16 @@ body {
 		}
 
 		&__logo {
+			height: 100%;
 			@include translate(navLogo, -100vw, 0, 1s);
 			&-text {
+				@include flex-center(row);
 				color: $white;
 				text-decoration: none;
 				font-size: 1.4rem;
+			}
+			img {
+				width: 40px;
 			}
 		}
 	}
@@ -737,7 +714,6 @@ body {
 	.main {
 		&__box {
 			height: 600px;
-
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(2, 1fr);

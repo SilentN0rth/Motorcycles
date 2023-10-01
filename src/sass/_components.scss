@@ -1,0 +1,107 @@
+@use './colors' as *;
+$burger-height: 35px;
+$stick-width: 45px;
+$stick-color: white;
+$stick-height: 6px;
+$transition-duration: 0.2s;
+.nav {
+	&--active {
+		.nav {
+			&__hamburger {
+				order: 1;
+				width: 100vw;
+				padding: 0;
+				&-btn {
+					padding: 6em;
+					width: 100%;
+					transition: background-color 0.3s;
+					&:hover {
+						background-color: $lightgray;
+					}
+				}
+			}
+		}
+	}
+	&__hamburger {
+		padding: 1em;
+		&-btn {
+			position: relative;
+			width: $stick-width;
+			height: $burger-height;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+			overflow: hidden;
+			.stick {
+				position: absolute;
+				right: 0;
+				left: 0;
+				height: $stick-height;
+				width: $stick-width;
+				background-color: $stick-color;
+				border-radius: 2px;
+				transition: transform ease-in-out, width ease-in-out;
+				transition-duration: $transition-duration;
+				&:nth-child(1) {
+					top: 0;
+				}
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4) {
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+				&:nth-child(5) {
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	.nav__hamburger-btn.burger--active {
+		.stick {
+			&:nth-child(even) {
+				transition-delay: $transition-duration;
+			}
+			&:nth-child(odd) {
+				width: 0;
+			}
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+			&:nth-child(4) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	.nav__hamburger-btn:not(.burger--active) {
+		.stick {
+			&:nth-child(odd) {
+				display: flex;
+				transition-delay: $transition-duration;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		&__hamburger {
+			display: none;
+		}
+	}
+}
+
+// Font weight
+.fw {
+	&-300 {
+		font-weight: 300;
+	}
+	&-400 {
+		font-weight: 400;
+	}
+	&-700 {
+		font-weight: 700;
+	}
+}
