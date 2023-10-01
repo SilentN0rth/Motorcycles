@@ -13,6 +13,7 @@ const toggleNav = () => {
 const toggleLinks = e => {
 	nav.classList.remove('nav--active')
 	document.body.classList.remove('overflow-hidden')
+	navBtn.classList.toggle('burger--active')
 	e.stopPropagation()
 }
 
