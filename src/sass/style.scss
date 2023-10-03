@@ -88,7 +88,7 @@ body {
 
 // NAV
 .nav {
-	// padding: 0 1em;
+	padding: 0.8em 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -112,33 +112,23 @@ body {
 		color: $white;
 		text-transform: uppercase;
 		text-decoration: none;
-		font-size: 1.2rem;
+		@include space(0, 1px);
 		&--active {
 			background-color: $lightgray;
 		}
 	}
 
 	&--active {
+		padding: 0;
 		flex-direction: column;
 		bottom: 0;
 		.nav {
-			&__item {
-				transition: background-color 0.3s;
-				&:hover {
-					background-color: $lightgray;
-				}
-			}
-
 			&__items,
 			&__item {
 				width: 100%;
 				height: 100%;
 				transition: background-color 0.3s;
-			}
-
-			&__items,
-			&__item {
-				font-size: 1.7rem;
+				font-size: 1.2rem;
 			}
 
 			&__items {
@@ -149,10 +139,10 @@ body {
 				order: 5;
 			}
 			&__item {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include flex-center(row);
+				@include space(200px, 4px);
 				border-top: 2px solid $darkgray;
+				transition: background-color 0.3s;
 				&:nth-child(1) {
 					@include translate(navItem, 100vw, 0, 1s);
 				}
@@ -167,6 +157,9 @@ body {
 				}
 				&:nth-child(5) {
 					@include translate(navItem, 100vw, 0, 1.8s);
+				}
+				&:hover {
+					background-color: $lightgray;
 				}
 			}
 		}
@@ -674,7 +667,8 @@ body {
 @media (min-width: 992px) {
 	.nav {
 		justify-content: space-around;
-		height: 67px;
+		padding: 0;
+		height: 87.59px;
 		&__active {
 			display: none;
 		}
@@ -688,8 +682,8 @@ body {
 		&__item {
 			display: flex;
 			align-items: center;
-			transition: background-color 0.3s;
 			@include translate(navItems, 100vw, 0, 1s);
+			transition: background-color 0.3s;
 			padding: 0 1em;
 			&:hover {
 				background-color: $lightgray;
@@ -697,13 +691,13 @@ body {
 		}
 
 		&__logo {
-			height: 100%;
 			@include translate(navLogo, -100vw, 0, 1s);
 			&-text {
 				@include flex-center(row);
+				@include space(auto, 1px);
 				color: $white;
 				text-decoration: none;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 			}
 			img {
 				width: 40px;

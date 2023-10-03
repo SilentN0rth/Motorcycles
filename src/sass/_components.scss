@@ -1,8 +1,8 @@
 @use './colors' as *;
-$burger-height: 35px;
-$stick-width: 45px;
+$burger-height: 30px;
+$stick-width: 39px;
 $stick-color: white;
-$stick-height: 6px;
+$stick-height: 5px;
 $transition-duration: 0.2s;
 .nav {
 	&--active {
@@ -12,12 +12,15 @@ $transition-duration: 0.2s;
 				width: 100vw;
 				padding: 0;
 				&-btn {
-					padding: 6em;
+					padding: 4em;
 					width: 100%;
 					transition: background-color 0.3s;
 					&:hover {
 						background-color: $lightgray;
 					}
+				}
+				.stick {
+					width: 33px;
 				}
 			}
 		}
